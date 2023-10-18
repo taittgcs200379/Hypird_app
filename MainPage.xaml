@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Android_project.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Start"
+            HorizontalOptions="FillAndExpand">
+            <Frame Padding="5" CornerRadius="4">
+                <Label Text="M-Hiking" HorizontalTextAlignment="Center"
+                        TextColor="BlueViolet" FontSize="Title"/>
+            </Frame>
+            <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+                <Label Text="Name:" VerticalOptions="Center" Margin="0,0,70,0"
+                       HorizontalOptions="Start"/>
+                <Entry x:Name="txtName" HorizontalOptions="StartAndExpand"
+                      Placeholder="Enter name" VerticalOptions="Center"/>
+
+            </HorizontalStackLayout>
+            
+            
+
+            <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+                <Label Text="Destination:" VerticalOptions="Center" Margin="0,0,30,0"
+           HorizontalOptions="Start"/>
+                <Entry x:Name="txtDestination" HorizontalOptions="StartAndExpand"
+          Placeholder="Enter Destination" VerticalOptions="Center"/>
+
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+                <Label Text="Date:" VerticalOptions="Center" Margin="0,0,70,0"
+            HorizontalOptions="Start"/>
+                <DatePicker x:Name="txtDate" Format="dd/MM/yyyy"/>
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+                <Label Text="Parking:" VerticalOptions="Center" Margin="0,0,60,0"
+           HorizontalOptions="Start"/>
+                <Picker x:Name="txtParking"  Title="Please Select" HorizontalOptions="FillAndExpand" 
+                        VerticalOptions="Center" >
+                    <Picker.Items>
+                        <x:String>Yes</x:String>
+                        <x:String> No </x:String>
+                    </Picker.Items>
+                </Picker>
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+                <Label Text="Length:" VerticalOptions="Center" Margin="0,0,60,0"
+           HorizontalOptions="Start"/>
+                <Picker x:Name="txtLenght"  Title="Please Select" HorizontalOptions="FillAndExpand" 
+                        VerticalOptions="Center" >
+                    <Picker.Items>
+                        <x:String>1km</x:String>
+                        <x:String>2km</x:String>
+                        <x:String>3km</x:String>
+                    </Picker.Items>
+                </Picker>
+
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+                <Label Text="Level:" VerticalOptions="Center" Margin="0,0,70,0"
+             HorizontalOptions="Start"/>
+                <Picker x:Name="txtLevel"  Title="Please Select" HorizontalOptions="FillAndExpand" 
+              VerticalOptions="Center" >
+                    <Picker.Items>
+                        <x:String>Beginner</x:String>
+                        <x:String>Profession</x:String>
+                       
+                    </Picker.Items>
+                </Picker>
+
+            </HorizontalStackLayout>
+
+
+
+
+            <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+                <Label Text="Description:" VerticalOptions="Center" Margin="0,0,30,0"
+           HorizontalOptions="Start"/>
+                <Entry x:Name="txtDescription" HorizontalOptions="StartAndExpand"
+          Placeholder="Enter Description" VerticalOptions="Center"/>
+
+            </HorizontalStackLayout>
+            
+            
+                <Button x:Name="btnSubmit" Text="Submit" Clicked="btnSubmit_Clicked" HorizontalOptions="End" SemanticProperties.Hint="Display info user selected"/>
+
+            
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

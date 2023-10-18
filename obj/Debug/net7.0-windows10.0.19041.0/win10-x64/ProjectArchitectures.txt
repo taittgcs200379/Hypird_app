@@ -1,0 +1,1 @@
+C:\TOP-UP\Android_project\Android_project.csproj;x64
